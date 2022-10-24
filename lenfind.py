@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 from ast import arg
 import os 
@@ -39,8 +39,8 @@ def main():
 
     pat = re.compile(r'(?:\d+:)+\d+')
     matches = re.findall(pat,text)
-    refined = [each for ix, each in enumerate(matches) if ix %2 == 0]
-    print(refined)
+    refined = [each for ix, each in enumerate(matches) if ix %2 == 0] # returns 2x items for each timecode match --> maybe investigate
+    # print(refined)
     total = 0
     for each in refined:
         proc = each.split(":")
@@ -49,16 +49,16 @@ def main():
             if ix == 0:
                 accum += int(each)
             if ix == 1:
-                print("HIT")
+                # print("HIT")
                 accum += int(each) * 60
             if ix == 2:
                 accum += int(each) * 3600
             if ix == 3:
                 accum += int(each) * 216000
-        print(accum)
+        # print(accum)
         total += accum
 
-    print(total)
+    # print(total)
 
     print(f"At 1x Speed: {str(datetime.timedelta(seconds=total)).split('.')[0]}")
     print(f"At 1.5x Speed: {str(datetime.timedelta(seconds=total/1.5)).split('.')[0]}")
