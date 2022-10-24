@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-from ast import arg
 import os 
 import requests
 from bs4 import BeautifulSoup
