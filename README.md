@@ -4,7 +4,7 @@ Command line utility to get the length of a YouTube playlist
 ### To install:
 
 1. Git clone this repository/download it as a folder
-2. Move the lenfind.py file into usr/local/bin
+2. Move the lenfind.py file into usr/local/bin (or create a symlink)
 3. Remove the .py extension, chmod +x it so that it becomes an executable
 
 ### To use:
